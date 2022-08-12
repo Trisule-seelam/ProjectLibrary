@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    input[type=submit] {
+        background-color: black;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .container {
+        border-radius: 5px;
+        background-color: white;
+        padding: 20px;
+    }
+
+    .container ::placeholder {
+        color: black;
+    }
+
+    .container {
+        width: 60%;
+    }
+
+    .container form label{
+        float: left;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">P-Library</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'home' %}">HOME</a></li>
+                    <li><a href="projects">PROJECTS</a></li>
+                    <li><a href="Contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <center>
+        <div class="container">
+            <form action="/action_page.php">
+                <label for="name">Name</label>
+                <input type="text" id="fname" name="name" placeholder="Your name..">
+                <label for="email">Email</label>
+                <input type="text" id="lname" name="email" placeholder="Your Email..">
+                <label for="subject">Subject</label>
+                <input type="text" id="lname" name="email" placeholder="enter your subject...">
+                <label for="subject">Description</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </center>
+</body>
+</html>

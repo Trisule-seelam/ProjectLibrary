@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">P-Library</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'home' %}">HOME</a></li>
+                    <li><a href="projects">PROJECTS</a></li>
+                    <li><a href="Contact">CONTACT</a></li>
+                </ul>   
+            </div>
+            <div class="search">
+                <form action="search" method="post">
+                <input class="srch" type="text" name="search" placeholder="Lets Find out Your's">
+                <button type="submit" class="btn" name="Search">Search</button>
+            </form>
+        </div>
+    </div>
+        <center>
+            <form class="form" action="projects" method="post" enctype="multipart/form-data">
+                <h2>Have a New Project?</h2>
+                <input type="text" name="title" placeholder="Project Title" required>
+                <input type="file" name="upload_file" id="upload_file1" readonly="true" class="line" required>
+                <h5 style="color: ghostwhite;">File Format: ZIP only</h5>
+                <button type="submit" id="pbtn" name="Upload">Upload</button>
+            </form>
+        </center>
+</body>
+</html>
